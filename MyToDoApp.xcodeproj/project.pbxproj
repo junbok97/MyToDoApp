@@ -53,6 +53,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB336BF329EBEBA9007A487D /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				CB412C5829A0AA5D00B5CBC5 /* DetailView.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		CB336BF429EBEBB3007A487D /* ToDoCell */ = {
+			isa = PBXGroup;
+			children = (
+				CB43BE7A299FB808008C2D74 /* ToDoCell.swift */,
+			);
+			path = ToDoCell;
+			sourceTree = "<group>";
+		};
 		CB412C5A29A0B16700B5CBC5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -61,22 +77,22 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		CB43B42229DAFD4F0023897B /* ToDoList */ = {
+		CB43B42229DAFD4F0023897B /* ToDoListViewController */ = {
 			isa = PBXGroup;
 			children = (
 				CB82E992299FAEB9008233FC /* ToDoListViewController.swift */,
-				CB43BE7A299FB808008C2D74 /* ToDoCell.swift */,
+				CB336BF429EBEBB3007A487D /* ToDoCell */,
 			);
-			path = ToDoList;
+			path = ToDoListViewController;
 			sourceTree = "<group>";
 		};
-		CB43B42329DAFD5C0023897B /* DetailView */ = {
+		CB43B42329DAFD5C0023897B /* DetailViewController */ = {
 			isa = PBXGroup;
 			children = (
 				CB412C5629A0AA1F00B5CBC5 /* DetailViewController.swift */,
-				CB412C5829A0AA5D00B5CBC5 /* DetailView.swift */,
+				CB336BF329EBEBA9007A487D /* DetailView */,
 			);
-			path = DetailView;
+			path = DetailViewController;
 			sourceTree = "<group>";
 		};
 		CB43BE77299FB52F008C2D74 /* Protocols */ = {
@@ -133,8 +149,8 @@
 		CB82E9AB299FAF02008233FC /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
-				CB43B42229DAFD4F0023897B /* ToDoList */,
-				CB43B42329DAFD5C0023897B /* DetailView */,
+				CB43B42229DAFD4F0023897B /* ToDoListViewController */,
+				CB43B42329DAFD5C0023897B /* DetailViewController */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";

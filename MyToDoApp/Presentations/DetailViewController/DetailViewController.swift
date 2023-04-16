@@ -8,6 +8,8 @@
 import UIKit
 
 final class DetailViewController: UIViewController {
+    
+    private let toDoData: ToDoData?
 
     private lazy var detailView: DetailView = {
         let detailView = DetailView(viewController: self, data: self.toDoData)
@@ -19,12 +21,6 @@ final class DetailViewController: UIViewController {
         item.tintColor = .red
         return item
     }()
-    
-    @objc func didTapDeleteButton() {
-        alert()
-    }
-        
-    private let toDoData: ToDoData?
     
     init(data: ToDoData?) {
         self.toDoData = data
@@ -74,6 +70,11 @@ private extension DetailViewController {
         ].forEach { alertController.addAction($0) }
         
         present(alertController, animated: true)
+    }
+    
+    
+    @objc func didTapDeleteButton() {
+        alert()
     }
 }
 

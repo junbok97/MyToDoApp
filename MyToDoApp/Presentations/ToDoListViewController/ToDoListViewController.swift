@@ -44,7 +44,21 @@ final class ToDoListViewController: UIViewController {
         tableView.reloadData()
     }
 
+}
+
+// MARK: - AutoLayout
+private extension ToDoListViewController {
+    func layout() {
+        view.addSubview(tableView)
     
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+    }
+
     func setupNaviBar() {
         self.navigationItem.title = "메모"
         let plusButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(plusButtonTapped))
@@ -59,23 +73,6 @@ final class ToDoListViewController: UIViewController {
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        
-    }
-
-
-}
-
-// MARK: - AutoLayout
-private extension ToDoListViewController {
-    func layout() {
-        view.addSubview(tableView)
-    
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
-        ])
     }
     
     @objc func plusButtonTapped() {
